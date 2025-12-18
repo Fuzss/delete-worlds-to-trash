@@ -1,7 +1,7 @@
 package fuzs.deleteworldstotrash.client.handler;
 
 import fuzs.deleteworldstotrash.DeleteWorldsToTrash;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmScreen;
 import net.minecraft.client.gui.screens.ProgressScreen;
