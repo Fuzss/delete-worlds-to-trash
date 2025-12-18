@@ -19,7 +19,8 @@ public class WorldTrashHandler {
      * The {@link java.awt.Desktop} class is broken on NeoForge and freezes the whole game; so avoid it at all cost.
      */
     private static final List<WorldRecycler> SYSTEM_RECYCLERS =
-            CommonAbstractions.INSTANCE.isForgeLike() ? ImmutableList.of(FileUtilsRecycler.INSTANCE) :
+            CommonAbstractions.INSTANCE.getModLoader() == CommonAbstractions.ModLoader.NEOFORGE ?
+                    ImmutableList.of(FileUtilsRecycler.INSTANCE) :
                     ImmutableList.of(FileUtilsRecycler.INSTANCE, DesktopRecycler.INSTANCE);
 
     public static boolean tryMoveToTrash(DirectoryLock lock, Path levelPath, String levelId) {

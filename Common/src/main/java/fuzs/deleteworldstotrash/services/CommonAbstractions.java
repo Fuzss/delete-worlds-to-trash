@@ -3,5 +3,9 @@ package fuzs.deleteworldstotrash.services;
 public interface CommonAbstractions {
     CommonAbstractions INSTANCE = ServiceProviderLoader.load(CommonAbstractions.class);
 
-    boolean isForgeLike();
+    ModLoader getModLoader();
+
+    enum ModLoader {
+        FABRIC, NEOFORGE
+    }
 }

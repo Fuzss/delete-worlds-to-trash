@@ -5,7 +5,7 @@ import fuzs.deleteworldstotrash.services.CommonAbstractions;
 public final class FabricCommonAbstractions implements CommonAbstractions {
 
     @Override
-    public boolean isForgeLike() {
-        return false;
+    public ModLoader getModLoader() {
+        return ModLoader.FABRIC;
     }
 }
