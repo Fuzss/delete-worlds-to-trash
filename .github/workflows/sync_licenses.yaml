@@ -1,8 +1,7 @@
-name: Sync license files to version branches
+name: Sync LICENSE.md files
 
 on:
   push:
-    branches: ['**']
     paths:
       - "LICENSE*.md"
   create:
@@ -27,7 +26,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync LICENSE files to version branches
+      - name: Sync LICENSE.md files
         run: |
           # Fetch all branches
           git fetch --all
