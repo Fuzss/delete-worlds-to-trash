@@ -3,7 +3,7 @@
         "id": "deleteworldstotrash",
         "group": "fuzs.deleteworldstotrash",
         "name": "Delete Worlds To Trash",
-        "version": "21.11.0",
+        "version": "26.1.0.0",
         "authors": [
             "Fuzs"
         ],
@@ -13,13 +13,13 @@
     "dependencies": [],
     "links": [
         {
-            "name": "github",
-            "slug": "deleteworldstotrash"
-        },
-        {
             "name": "curseforge",
             "slug": "delete-worlds-to-trash",
             "id": "571076"
+        },
+        {
+            "name": "github",
+            "slug": "deleteworldstotrash"
         },
         {
             "name": "modrinth",
