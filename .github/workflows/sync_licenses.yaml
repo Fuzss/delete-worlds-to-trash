@@ -3,9 +3,7 @@ name: Sync LICENSE.md files
 on:
   push:
     paths:
-      - "LICENSE*.md"
-  create:
-    branches: ['**']
+      - "LICENS*.md"
   workflow_dispatch:
 
 permissions:
@@ -46,11 +44,15 @@ jobs:
               # Switch to version branch, create local branch if needed
               git checkout -B "$name" "origin/$name"
 
-              # Copy all LICENSE*.md files from main into this branch
-              git checkout main -- LICENSE*.md
+              # Remove all known license variants first
+              # This includes 'LICENSE', 'LICENSE.md', 'LICENSING.md', 'LICENSE-ASSETS.md', etc.
+              rm -f LICENS*
+
+              # Copy all 'LICENSE.md' files from main into this branch
+              git checkout main -- 'LICENS*'
 
               # Stage and commit changes only if there are any
-              git add -A LICENSE*.md
+              git add -A 'LICENS*'
               git diff-index --quiet HEAD || {
                 git commit -m "Sync license files from main [skip ci]"
                 git push origin "$name"
