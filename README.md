@@ -1,5 +1,12 @@
 # deleteworldstotrash
 
+### Minecraft 26.x
+
+| Branch | Status | Changelog | Fabric | NeoForge |
+| --- | --- | --- | --- | --- |
+| [26.1.x](https://github.com/Fuzss/deleteworldstotrash/tree/26.1.x) | ✅&nbsp;Primary | [CHANGELOG.md](https://github.com/Fuzss/deleteworldstotrash/blob/26.1.x/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/delete-worlds-to-trash/files/all?version=26.1&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/delete-worlds-to-trash/versions?g=26.1&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/delete-worlds-to-trash/files/all?version=26.1&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/delete-worlds-to-trash/versions?g=26.1&l=neoforge) |
+
+
 ### Minecraft 1.21.x
 
 | Branch | Status | Changelog | Fabric | NeoForge |
