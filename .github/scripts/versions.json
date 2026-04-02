@@ -1,6 +1,6 @@
 {
-  "versions": {
-    "26.1.0": "primary",
+  "branches": {
+    "26.1.x": "primary",
     "1.21.1": "maintained",
     "1.20.1": "fixes"
   }

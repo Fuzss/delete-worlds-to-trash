@@ -52,7 +52,7 @@ DEFAULT_DOWNLOADS = (
 MAVEN_BASE_URL = "https://github.com/Fuzss/modresources/tree/main/maven/"
 README_FILE = Path("README.md")
 VERSIONS_FILE = Path(".github/scripts/versions.json")
-BRANCH_PATTERN = re.compile(r"\d+\.\d+\.\d+")
+BRANCH_PATTERN = re.compile(r"\d+\.\d+\.(\d+|x)")
 
 
 def get_repo_url():
@@ -108,14 +108,14 @@ def load_support_data():
     if VERSIONS_FILE.exists():
         with open(VERSIONS_FILE) as f:
             data = json.load(f)
-            return data.get("versions", {}), data.get("published", False)
+            return data.get("branches", {}), data.get("published", False)
 
     return {}, False
 
 
 def semver_key(branch: str):
     """Convert branch 'X.Y.Z' into tuple (X,Y,Z) for proper numeric sorting."""
-    return tuple(int(x) for x in branch.split("."))
+    return tuple(int(part) for part in branch.split(".") if part.isdigit())
 
 
 def get_all_branches():
@@ -149,6 +149,7 @@ def group_branches_by_mc_version(branches):
 
     Example:
         1.21.1 -> 1.21.x
+        26.1.x -> 26.x
 
     Returns:
         dict[str, list[str]]
@@ -156,8 +157,9 @@ def group_branches_by_mc_version(branches):
     versions = {}
 
     for branch in branches:
-        mc_version = ".".join(branch.split(".")[:2]) + ".x"
-        versions.setdefault(mc_version, []).append(branch)
+        components = 2 if branch.startswith("1.") else 1
+        minecraft = ".".join(branch.split(".")[:components]) + ".x"
+        versions.setdefault(minecraft, []).append(branch)
 
     return versions
 
@@ -249,13 +251,13 @@ def get_mc_version(branch: str) -> str:
     """
     parts = branch.split(".")
 
-    while parts and parts[-1] == "0":
+    while parts and parts[-1] == "0" or parts[-1] == "x":
         parts.pop()
 
     return ".".join(parts)
 
 
-def platform_links(links, branch, loader, branch_loaders):
+def platform_links(links, minecraft, loader, branch_loaders):
     """
     Render loader download links for a table cell.
 
@@ -266,16 +268,15 @@ def platform_links(links, branch, loader, branch_loaders):
         return "n/a"
 
     entries = []
-    mc_version = get_mc_version(branch)
 
-    curseforge_url = link_url(links, "curseforge", mc_version, loader)
+    curseforge_url = link_url(links, "curseforge", minecraft, loader)
     if curseforge_url:
         entries.append(
             f'{CURSEFORGE_ICON}'
             f'[CurseForge]({curseforge_url})'
         )
 
-    modrinth_url = link_url(links, "modrinth", mc_version, loader)
+    modrinth_url = link_url(links, "modrinth", minecraft, loader)
     if modrinth_url:
         entries.append(
             f'{MODRINTH_ICON}'
@@ -305,6 +306,7 @@ def generate_table_row(
     """
     if metadata_info:
         metadata = metadata_info["metadata"]
+        minecraft = metadata_info.get("minecraft") or get_mc_version(branch)
         links = metadata.get("links", [])
         branch_loaders = metadata_info["loaders"]
         id = metadata["mod"]["id"]
@@ -318,7 +320,7 @@ def generate_table_row(
         ]
 
         row += [
-            platform_links(links, branch, loader, branch_loaders)
+            platform_links(links, minecraft, loader, branch_loaders)
             for loader in loader_columns
         ]
 

@@ -38,7 +38,7 @@ jobs:
             name="${branch#origin/}"
 
             # Match version branches like 1.21.5 or 26.1.0
-            if [[ "$name" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            if [[ "$name" =~ ^[0-9]+\.[0-9]+\.([0-9]+|x)$ ]]; then
               echo "Updating branch $name"
 
               # Switch to version branch, create local branch if needed
