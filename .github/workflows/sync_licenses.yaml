@@ -2,6 +2,8 @@ name: Sync LICENSE.md files
 
 on:
   push:
+    branches:
+      - 'main'
     paths:
       - 'LICENS*.md'
   workflow_dispatch:

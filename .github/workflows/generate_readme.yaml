@@ -2,13 +2,16 @@ name: Generate README.md file
 
 on:
   push:
-    branches: ['**']
+    branches:
+      - 'main'
     paths:
       - 'versions.json'
   create:
-    branches: ['**']
+    branches:
+      - '**'
   delete:
-    branches: ['**']
+    branches:
+      - '**'
   workflow_dispatch:
 
 permissions:
