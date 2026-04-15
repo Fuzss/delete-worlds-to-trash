@@ -7,11 +7,7 @@ on:
     paths:
       - 'versions.json'
   create:
-    branches:
-      - '**'
   delete:
-    branches:
-      - '**'
   workflow_dispatch:
 
 permissions:
@@ -19,6 +15,7 @@ permissions:
 
 jobs:
   generate-readme:
+    if: startsWith(github.ref, 'refs/heads/')
     runs-on: ubuntu-latest
 
     steps:
