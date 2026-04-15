@@ -1,6 +1,6 @@
 package fuzs.deleteworldstotrash.neoforge.client;
 
-import fuzs.deleteworldstotrash.DeleteWorldsToTrash;
+import fuzs.deleteworldstotrash.common.DeleteWorldsToTrash;
 import fuzs.deleteworldstotrash.neoforge.data.client.ModLanguageProvider;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;

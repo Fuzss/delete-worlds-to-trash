@@ -1,6 +1,6 @@
-package fuzs.deleteworldstotrash.client.handler;
+package fuzs.deleteworldstotrash.common.client.handler;
 
-import fuzs.deleteworldstotrash.DeleteWorldsToTrash;
+import fuzs.deleteworldstotrash.common.DeleteWorldsToTrash;
 import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmScreen;

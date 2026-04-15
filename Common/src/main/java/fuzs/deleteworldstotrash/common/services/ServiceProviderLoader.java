@@ -1,4 +1,4 @@
-package fuzs.deleteworldstotrash.services;
+package fuzs.deleteworldstotrash.common.services;
 
 import java.util.ServiceLoader;
 

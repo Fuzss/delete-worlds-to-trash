@@ -1,11 +1,11 @@
-package fuzs.deleteworldstotrash.client.handler;
+package fuzs.deleteworldstotrash.common.client.handler;
 
 import com.google.common.collect.ImmutableList;
-import fuzs.deleteworldstotrash.DeleteWorldsToTrash;
-import fuzs.deleteworldstotrash.client.recycler.DesktopRecycler;
-import fuzs.deleteworldstotrash.client.recycler.FileUtilsRecycler;
-import fuzs.deleteworldstotrash.client.recycler.WorldRecycler;
-import fuzs.deleteworldstotrash.services.CommonAbstractions;
+import fuzs.deleteworldstotrash.common.DeleteWorldsToTrash;
+import fuzs.deleteworldstotrash.common.client.recycler.DesktopRecycler;
+import fuzs.deleteworldstotrash.common.client.recycler.FileUtilsRecycler;
+import fuzs.deleteworldstotrash.common.client.recycler.WorldRecycler;
+import fuzs.deleteworldstotrash.common.services.CommonAbstractions;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.SystemToast;
 import net.minecraft.util.DirectoryLock;

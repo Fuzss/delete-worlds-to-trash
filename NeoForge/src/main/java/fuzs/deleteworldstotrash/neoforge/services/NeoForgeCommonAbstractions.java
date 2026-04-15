@@ -1,6 +1,6 @@
 package fuzs.deleteworldstotrash.neoforge.services;
 
-import fuzs.deleteworldstotrash.services.CommonAbstractions;
+import fuzs.deleteworldstotrash.common.services.CommonAbstractions;
 
 public final class NeoForgeCommonAbstractions implements CommonAbstractions {
 

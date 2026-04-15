@@ -1,6 +1,6 @@
 package fuzs.deleteworldstotrash.neoforge.data.client;
 
-import fuzs.deleteworldstotrash.client.handler.TrashScreenHandler;
+import fuzs.deleteworldstotrash.common.client.handler.TrashScreenHandler;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 

@@ -1,4 +1,4 @@
-package fuzs.deleteworldstotrash.services;
+package fuzs.deleteworldstotrash.common.services;
 
 public interface CommonAbstractions {
     CommonAbstractions INSTANCE = ServiceProviderLoader.load(CommonAbstractions.class);

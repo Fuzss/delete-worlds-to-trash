@@ -1,7 +1,7 @@
-package fuzs.deleteworldstotrash.mixin.client;
+package fuzs.deleteworldstotrash.common.mixin.client;
 
-import fuzs.deleteworldstotrash.client.handler.TrashScreenHandler;
-import fuzs.deleteworldstotrash.client.handler.WorldTrashHandler;
+import fuzs.deleteworldstotrash.common.client.handler.TrashScreenHandler;
+import fuzs.deleteworldstotrash.common.client.handler.WorldTrashHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.worldselection.WorldSelectionList;
 import net.minecraft.world.level.storage.LevelSummary;

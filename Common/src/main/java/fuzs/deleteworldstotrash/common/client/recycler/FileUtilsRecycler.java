@@ -1,4 +1,4 @@
-package fuzs.deleteworldstotrash.client.recycler;
+package fuzs.deleteworldstotrash.common.client.recycler;
 
 import com.sun.jna.platform.FileUtils;
 

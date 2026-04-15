@@ -1,6 +1,6 @@
-package fuzs.deleteworldstotrash.mixin.client;
+package fuzs.deleteworldstotrash.common.mixin.client;
 
-import fuzs.deleteworldstotrash.client.handler.WorldTrashHandler;
+import fuzs.deleteworldstotrash.common.client.handler.WorldTrashHandler;
 import net.minecraft.util.DirectoryLock;
 import net.minecraft.world.level.storage.LevelStorageSource;
 import org.spongepowered.asm.mixin.Final;

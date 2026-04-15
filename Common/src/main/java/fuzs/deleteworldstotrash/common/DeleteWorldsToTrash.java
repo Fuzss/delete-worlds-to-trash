@@ -1,4 +1,4 @@
-package fuzs.deleteworldstotrash;
+package fuzs.deleteworldstotrash.common;
 
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;

@@ -1,6 +1,6 @@
 package fuzs.deleteworldstotrash.neoforge;
 
-import fuzs.deleteworldstotrash.DeleteWorldsToTrash;
+import fuzs.deleteworldstotrash.common.DeleteWorldsToTrash;
 import net.minecraft.data.metadata.PackMetadataGenerator;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;

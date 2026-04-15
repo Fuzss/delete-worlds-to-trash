@@ -1,4 +1,4 @@
-package fuzs.deleteworldstotrash.client.recycler;
+package fuzs.deleteworldstotrash.common.client.recycler;
 
 import java.io.File;
 import java.io.IOException;
