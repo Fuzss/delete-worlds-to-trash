@@ -2,6 +2,7 @@ name: Generate README.md file
 
 on:
   push:
+    branches: ['**']
     paths:
       - 'versions.json'
   create:
@@ -15,9 +16,6 @@ permissions:
 
 jobs:
   generate-readme:
-    if: >
-      github.event_name != 'create' && github.event_name != 'delete' || 
-      github.event.ref_type == 'branch'
     runs-on: ubuntu-latest
 
     steps:
